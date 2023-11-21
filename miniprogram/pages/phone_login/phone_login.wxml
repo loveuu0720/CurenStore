@@ -1,0 +1,24 @@
+<view class="viewport">
+  <view class="logo">
+    <image src="../../images/images/logo.png"></image>
+  </view>
+  <view class="login">
+    <view class="extra">
+      <view class="options">
+        <view class="user">用户名：</view>
+        <input class="input_login user" bindinput="getName" placeholder="请输入用户名" placeholder-class="placeholder" />
+      </view>
+      <view class="options">
+        <view class="user">密码：</view>
+        <input class="input_login pwd" bindinput="getPwd" type="password" placeholder-class="placeholder" placeholder="请输入密码" />
+      </view>
+      <!-- 确认密码 -->
+      <view class="options">
+        <view class="user">确认密码：</view>
+        <input class="input_login rePwd" bindinput="getRePwd" type="password" placeholder-class="placeholder" placeholder="请再次确认密码" />
+      </view>
+      <button class="login_btn" bind:tap="go_index">注册</button>
+    </view>
+    <view class="tips">登录/注册即视为你同意《服务条款》和《粗人店铺的隐私协议》</view>
+  </view>
+</view>

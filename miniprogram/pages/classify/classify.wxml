@@ -1,0 +1,37 @@
+<import src="classify.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+<view class="viewport" wx:else>
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="input">
+      <text class="iconfont icon-sousuo"></text>
+      <text class="searchKey">运动鞋</text>
+    </view>
+  </view>
+  <!-- 分类 -->
+  <view class="categories">
+    <!-- 左侧：一级分类 -->
+    <scroll-view class="primary" scroll-y>
+      <view wx:for="{{leftCategoty}}" data-index="{{index}}" bindtap="toggleActive" wx:key="index" class="item {{index === activeIndex ? 'active' : ''}}">
+        <text class="name">{{item}}</text>
+      </view>
+    </scroll-view>
+    <!-- 右侧：二级分类 -->
+    <scroll-view class="secondary" scroll-y>
+      <!-- 内容区域 -->
+      <view class="panel">
+        <view class="section">
+          <!-- 只有6条 -->
+          <navigator wx:for="{{shoesList}}" wx:key="goods" class="goods" hover-class="none" :url="">
+            <image class="image" mode="aspectFill" src="{{item.pic}}"></image>
+            <view class="name">{{item.text}}</view>
+            <view class="price">
+              <text class="symbol">¥</text>
+              <text class="number">{{item.price}}.00</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

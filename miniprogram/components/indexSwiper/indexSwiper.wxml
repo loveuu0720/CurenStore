@@ -1,0 +1,28 @@
+<view class="carousel">
+    <swiper circular="true" autoplay="true" interval="2000" indicator-dots="true" 	indicator-active-color="#fff" style="height: 900rpx;">
+      <swiper-item class="item">
+          <image
+            mode="aspectFill"
+            class="image"
+            src="../../images/images/O1CN012csFZT1GSvDsSdQd2_!!2411030622.jpg_Q75.jpg_.jpg"
+          />
+      </swiper-item>
+      <swiper-item>
+          <image
+            mode="aspectFill"
+            class="image"
+            src="../../images/images/O1CN01QgIWMC1GSvEgelox1_!!2411030622.jpg_Q75.jpg_.jpg"
+          />
+      </swiper-item>
+      <swiper-item>
+          <image
+            mode="aspectFill"
+            class="image"
+            src="../../images/images/O1CN01WoM4bG1GSvDuFpev7_!!2411030622.jpg_Q75.jpg_.jpg"
+          />
+      </swiper-item>
+    </swiper>
+    <!-- 指示点 -->
+    <view class="indicator">
+    </view>
+  </view>

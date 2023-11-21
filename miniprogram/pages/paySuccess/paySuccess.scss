@@ -1,0 +1,55 @@
+.box {
+  width: 100%;
+  height: 500rpx;
+  background: #27ba9b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .img {
+    width: 140rpx;
+    height: 140rpx;
+    margin-top: 10px ;
+  }
+  .text {
+    padding-top: 30rpx;
+    font-size: 40rpx;
+    color: #fff;
+    margin-bottom: 40rpx;
+  }
+}
+.btn {
+  display: flex;
+  .button {
+    border: 1px solid #fff;
+    background: #27ba9b;
+    border-radius: 80rpx;
+    margin: 0rpx 30rpx 30rpx 30rpx;
+    color: #fff;
+    font-size: 28rpx;
+    width: 240rpx;
+  }
+  .button:active {
+    background: #188870;
+  }
+}
+/* 分类标题 */
+.caption {
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  padding: 36rpx 0 40rpx;
+  font-size: 32rpx;
+  color: #262626;
+  .img1,.img2 {
+    width: 20rpx;
+    height: 20rpx;
+    margin: 7rpx -20rpx;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 28rpx 0 30rpx;
+  }
+}

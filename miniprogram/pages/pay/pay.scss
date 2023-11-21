@@ -1,0 +1,163 @@
+page{
+  background-color: #f4f4f4;
+}
+.list {
+  margin: auto;
+  height: 100rpx;
+  width: 720rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  align-items: center;
+  box-shadow: 0 3px 4px rgba(0,0,0, 0.13);
+  .icon {
+    margin-left: 30rpx;
+    display: flex;
+    .bg {
+      width: 55rpx;
+      height: 55rpx;
+      background: #27ba9b;
+      border-radius: 50%;
+      position: relative;
+      top: 20%;
+      
+      .icon_address {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+      }
+    }
+    .content {
+      margin-left: 30rpx;
+      .name {
+        font-size: 28rpx;
+      }
+      .address {
+        margin-top: -20rpx;
+        font-size: 24rpx;
+      }
+    }
+  }
+}
+
+
+.navigator {
+  display: flex;
+  width: 720rpx;
+  height: 190rpx;
+  margin: auto;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 3px 4px rgba(0,0,0, 0.13);
+}
+.picture {
+  padding: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.name {
+  height: 72rpx;
+  width: 400rpx;
+  font-size: 26rpx;
+  color: #444;
+}
+
+.attrsText {
+  line-height: 1.8;
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  align-self: flex-start;
+  border-radius: 4rpx;
+  color: #888;
+  background-color: #f7f7f8;
+}
+
+.price {
+  line-height: 1;
+  font-size: 26rpx;
+  color: #444;
+  margin-bottom: 2rpx;
+  color: #cf4444;
+  margin-bottom: 20rpx;
+
+  &::before {
+    content: '￥';
+    font-size: 80%;
+  }
+}
+
+// 商品数量
+.count {
+  position: absolute;
+  bottom: 20rpx;
+  right: 5rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220rpx;
+  height: 48rpx;
+
+  .text {
+    height: 100%;
+    padding: 0 20rpx;
+    font-size: 32rpx;
+    color: #444;
+  }
+
+  .input {
+    height: 100%;
+    text-align: center;
+    border-radius: 4rpx;
+    font-size: 24rpx;
+    color: #444;
+    background-color: #f6f6f6;
+  }
+}
+
+.cart-swipe {
+display: block;
+margin: 20rpx 0;
+}
+
+.cart-swipe-right {
+display: flex;
+height: 100%;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 6px;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 26rpx;
+  border-radius: 0;
+}
+
+.delete-button {
+  background-color: #cf4444;
+}
+}
+.count {
+  position: fixed;
+  top: 60%;
+  right: -20%;
+  font-size: 26rpx;
+  color: #01ab9d;
+}
+.ellipsis {
+  margin-top: 20rpx;
+}
+

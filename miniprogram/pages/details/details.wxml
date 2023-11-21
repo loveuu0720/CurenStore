@@ -1,0 +1,141 @@
+<scroll-view scroll-y class="viewport">
+  <!-- 基本信息 -->
+  <view class="goods">
+    <!-- 商品主图 -->
+    <view class="preview">
+      <swiper indicator-active-color="#fff" indicator-dots="true" circular style="height: 100%;">
+        <swiper-item>
+          <image mode="aspectFill" src="{{goodsDetail.pic}}" class="image" />
+        </swiper-item>
+        <swiper-item>
+          <image mode="aspectFill" src="{{goodsDetail.pic}}" class="image" />
+        </swiper-item>
+        <swiper-item>
+          <image mode="aspectFill" src="{{goodsDetail.pic}}" class="image" />
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- 商品简介 -->
+    <view class="meta">
+      <view class="price">
+        <text class="symbol">¥</text>
+        <text class="number">{{goodsDetail.price}}.00</text>
+      </view>
+      <view class="name ellipsis">{{goodsDetail.title}}</view>
+      <view class="desc">{{goodsDetail.title}}</view>
+    </view>
+    <!-- 操作面板 -->
+    <view class="action">
+      <view class="item arrow" bind:tap="addShopCart">
+        <text class="label">选择</text>
+        <text class="text ellipsis"> 请选择商品规格 </text>
+        <van-icon name="arrow" color="gray" />
+      </view>
+      <view class="item arrow" bind:tap="openAddress">
+        <text class="label">送至</text>
+        <text class="text ellipsis"> 请选择收获地址 </text>
+        <van-icon name="arrow" color="gray" />
+      </view>
+      <view class="item arrow">
+        <text class="label">服务</text>
+        <text class="text ellipsis"> 无忧退 快速退款 免费包邮 </text>
+        <van-icon name="arrow" color="gray" />
+      </view>
+    </view>
+  </view>
+  <!-- 商品详情 -->
+  <view class="detail panel">
+    <view class="title">
+      <text>详情</text>
+    </view>
+    <view class="content">
+      <view class="properties">
+      </view>
+      <!-- 图片详情 -->
+      <image mode="widthFix" src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png?sign=0e49ff63c90884cfd40e55e0f1bdbe4f&t=1697683569" class="detail_img"></image>
+      <image mode="widthFix" src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/O1CN01GN2rgp1GSv8aiZKqF_!!2411030622.jpg?sign=7675cb7bbee46cecc9d5f091bca00ac4&t=1697271503" class="detail_img"></image>
+      <image mode="widthFix" src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/O1CN01uhvkW51GSv8PKKAgZ_!!2411030622.jpg?sign=4ba787b1609eee4978b89149e99323d3&t=1697271698" class="detail_img"></image>
+      <image mode="widthFix" src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/O1CN019Xnwkc1GSv8Xrdhd9_!!2411030622.jpg?sign=aa5049a5de554334c8008a8e39d94e03&t=1697271841" class="detail_img" />
+      <image mode="widthFix" src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/O1CN01PA6nqr1GSv8YdHkqM_!!2411030622.jpg?sign=8b51b01cab01dee190f7f9b344847444&t=1697271895" class="detail_img" />
+      <image src="https://636c-cloud1-2g9ptapl30a0705b-1321158864.tcb.qcloud.la/details/content/pic.png?sign=4a24b85978da5c3b0346df64b13e8167&t=1697272135" class="detail_img" mode="widthFix" />
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 用户操作 -->
+<view class="toolbar" :style="{ paddingBottom: safeAreaInsets?.bottom + 'px' }">
+  <view class="icons">
+    <view class="left_icon" bind:tap="love" wx:if="love_icon">
+      <van-icon name="like-o" class="iconfont" />
+      <text>收藏</text>
+    </view>
+    <view class="left_icon" wx:else="love_icon">
+      <van-icon name="like" />
+      <text>已收藏</text>
+    </view>
+    <view class="left_icon" bind:tap="goShop">
+      <van-icon name="shopping-cart-o" class="iconfont" />
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class="buttons">
+    <view class="addcart" bind:tap="addShopCart"> 加入购物车 </view>
+    <view class="buynow" bind:tap="addShopCart"> 立即购买 </view>
+  </view>
+</view>
+
+<!-- 购物车选择 -->
+<van-popup show="{{ show }}" closeable position="bottom" custom-style="height: 60%" bind:close="onClose">
+  <view class="top">
+    <image src="{{goodsDetail.pic}}" mode="aspectFill" class="img" />
+    <view class="left_price">
+      <view class="price">￥{{goodsDetail.price}}.00</view>
+      <view class="repertory">库存：4023</view>
+    </view>
+  </view>
+  <view class="color">
+    <view class="title">颜色</view>
+    <t-radio-group t-class="horizontal-box" value="{{value1}}" bind:change="onChange_color">
+      <view wx:for="{{color_value}}" wx:key="index" class="card {{value == index ? 'card--active' : ''}}">
+        <t-radio value="{{index}}" label="{{item}}" icon="none" bind:tap="getColor" data-item="{{item}}"   />
+      </view>
+    </t-radio-group>
+  </view>
+  <view class="size">
+    <view class="title">尺寸</view>
+    <t-radio-group t-class="horizontal-box" value="{{value1}}" bind:change="onChange_size">
+      <view wx:for="{{size_vlaue}}" wx:key="index" class="card {{value1 == index ? 'card--active' : ''}}">
+        <t-radio value="{{index}}" label="{{item}}"icon="none" bind:tap="getSize" data-item="{{item}}"  />
+      </view>
+    </t-radio-group>
+  </view>
+  <view class="acount">
+    <view class="title">数量</view>
+    <view class="addOrRed">
+      <van-stepper value="{{ count }}" bind:change="onChangeNum" />
+    </view>
+  </view>
+  <button class="bottom_btn" bind:tap="addCart">加入购物车</button>
+</van-popup>
+
+<!-- 收货地址选择 -->
+<van-popup show="{{showAddress}}" closeable position="bottom" custom-style="height: 50%" bind:close="closeAddress">
+  <view class="top">配送至</view>
+  <view class="line"></view>
+  <view class="list" wx:for="{{3}}" wx:key="index" style="margin-bottom: 80rpx;">
+    <view class="icon">
+      <view class="bg">
+        <van-icon class="icon_address" name="location" color="#ffffff" />
+      </view>
+      <view class="content">
+        <view class="name">赵昱峰 13334468746</view>
+        <view class="address">重庆市合川区双体疗养院项目三部-1组</view>
+      </view>
+    </view>
+    <view class="select">
+      <van-checkbox value="{{ checked }}" icon-size="16px" checked-color="#27ba9b" bind:change="onChange">
+      </van-checkbox>
+    </view>
+  </view>
+  <van-button round type="info" icon="plus" class="add_btn" size="large" color="#35c8a9">新增地址</van-button>
+</van-popup>

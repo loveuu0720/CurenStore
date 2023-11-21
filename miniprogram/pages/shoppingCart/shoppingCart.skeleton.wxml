@@ -1,0 +1,78 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/10/9下午4:12:24
+使用方法：
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\shoppingCart\shoppingCart.wxml 引入模板
+
+```
+<import src="shoppingCart.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\shoppingCart\shoppingCart.wxss 中引入样式
+```
+@import "./shoppingCart.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <scroll-view scroll-y="true" class="scroll-view">
+      <view class="cart-list">
+        <view class="tips">
+          <text class="label sk-transparent sk-text-0-0000-899 sk-text">满减</text>
+          <text class="desc sk-transparent sk-text-0-0000-298 sk-text">满1件, 即可享受9折优惠</text>
+        </view>
+        <view class="goods">
+          <checkbox class="checkbox" color="#EFEFEF"></checkbox>
+          <navigator class="navigator" hover-class="none">
+            <image class="picture sk-image" mode="aspectFill"></image>
+            <view class="meta">
+              <view class="name ellipsis sk-transparent sk-text-14-2857-497 sk-text">人手必备，儿童轻薄透气防蚊裤73-140cm</view>
+              <view class="attrsText ellipsis sk-transparent sk-text-22-2222-559 sk-text">黄色小象 140cm</view>
+              <view class="price sk-transparent sk-text-0-0000-72 sk-text sk-pseudo sk-pseudo-circle">69.00</view>
+            </view>
+          </navigator>
+          <view class="count">
+            <text class="text sk-transparent sk-text-14-2857-839 sk-text">-</text>
+            <view class="input sk-image" type="number" value="1"></view>
+            <text class="text sk-transparent sk-text-14-2857-385 sk-text">+</text>
+          </view>
+        </view>
+      </view>
+      <view is="components/goodsItem/goodsItem">
+        <view class="goodsItem--caption">
+          <image class="goodsItem--img1 sk-image" mode="true"></image>
+          <text class="goodsItem--text sk-transparent sk-text-0-0000-72 sk-text">猜你喜欢</text>
+          <image class="goodsItem--img2 sk-image" mode="true"></image>
+        </view>
+        <view class="goodsItem--guess">
+          <navigator class="goodsItem--guess-item">
+            <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            <view class="goodsItem--name sk-transparent sk-text-14-2857-995 sk-text">女士半透明夜光飞织运动鞋</view>
+            <view class="goodsItem--price">
+              <text class="goodsItem--small sk-transparent sk-opacity">¥</text>
+              <text class="sk-transparent sk-text-0-0000-105 sk-text">268.00</text>
+            </view>
+          </navigator>
+          <navigator class="goodsItem--guess-item">
+            <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            <view class="goodsItem--name sk-transparent sk-text-14-2857-190 sk-text">软糯似baby肌肤，男士高领小山羊毛衣</view>
+            <view class="goodsItem--price">
+              <text class="goodsItem--small sk-transparent sk-opacity">¥</text>
+              <text class="sk-transparent sk-text-0-0000-39 sk-text">559.00</text>
+            </view>
+          </navigator>
+          <navigator class="goodsItem--guess-item">
+            <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            <view class="goodsItem--name sk-transparent sk-text-14-2857-410 sk-text">轻盈减震畅快呼吸，女士飞鸟轻简四季运动鞋</view>
+          </navigator>
+          <navigator class="goodsItem--guess-item">
+            <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            <view class="goodsItem--name sk-transparent sk-text-14-2857-394 sk-text">新潮运动鞋，女士保暖皮毛一体雪地靴</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

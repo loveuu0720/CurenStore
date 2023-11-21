@@ -1,0 +1,101 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/10/9下午4:11:38
+使用方法：
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\personPage\personPage.wxml 引入模板
+
+```
+<import src="personPage.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\personPage\personPage.wxss 中引入样式
+```
+@import "./personPage.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <scroll-view enable-back-to-top="true" scroll-y="true" class="viewport sk-image">
+      <view class="profile">
+        <view class="overview">
+          <navigator hover-class="none">
+            <image class="avatar sk-image" mode="aspectFill"></image>
+          </navigator>
+          <view class="meta">
+            <view class="nickname sk-transparent sk-text-0-0000-288 sk-text"> 粗人 </view>
+            <navigator class="extra" hover-class="none">
+              <text class="update sk-transparent sk-text-16-6667-820 sk-text">更新头像昵称</text>
+            </navigator>
+          </view>
+        </view>
+        <navigator class="settings sk-transparent sk-text-14-2857-118 sk-text" hover-class="none">
+          设置
+        </navigator>
+      </view>
+      <view class="orders">
+        <view class="title sk-transparent">
+          我的订单
+          <navigator class="navigator sk-transparent" hover-class="none">
+            查看全部订单
+            <text class="icon-right"></text>
+          </navigator>
+        </view>
+        <view class="section">
+          <navigator class="navigator" hover-class="none">
+            <image class="img sk-image" mode="aspectFit"></image>
+          </navigator>
+          <navigator class="navigator" hover-class="none">
+            <image class="img sk-image" mode="aspectFit"></image>
+          </navigator>
+          <navigator class="navigator" hover-class="none">
+            <image class="img sk-image" mode="aspectFit"></image>
+          </navigator>
+          <navigator class="navigator" hover-class="none">
+            <image class="img sk-image" mode="aspectFit"></image>
+          </navigator>
+        </view>
+        <view class="text">
+          <text class="sk-transparent sk-text-14-2857-583 sk-text">钱包</text>
+          <text class="sk-transparent sk-text-14-2857-95 sk-text">待付款</text>
+          <text class="sk-transparent sk-text-14-2857-462 sk-text">待收货</text>
+          <text class="sk-transparent sk-text-14-2857-881 sk-text">待评价</text>
+        </view>
+      </view>
+      <view class="guess">
+        <view is="components/goodsItem/goodsItem">
+          <view class="goodsItem--caption">
+            <image class="goodsItem--img1 sk-image" mode="true"></image>
+            <text class="goodsItem--text sk-transparent sk-text-0-0000-517 sk-text">猜你喜欢</text>
+            <image class="goodsItem--img2 sk-image" mode="true"></image>
+          </view>
+          <view class="goodsItem--guess">
+            <navigator class="goodsItem--guess-item">
+              <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+              <view class="goodsItem--name sk-transparent sk-text-14-2857-714 sk-text">女士半透明夜光飞织运动鞋</view>
+              <view class="goodsItem--price">
+                <text class="goodsItem--small sk-transparent sk-opacity">¥</text>
+                <text class="sk-transparent sk-text-0-0000-491 sk-text">268.00</text>
+              </view>
+            </navigator>
+            <navigator class="goodsItem--guess-item">
+              <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+              <view class="goodsItem--name sk-transparent sk-text-14-2857-352 sk-text">软糯似baby肌肤，男士高领小山羊毛衣</view>
+              <view class="goodsItem--price">
+                <text class="goodsItem--small sk-transparent sk-opacity">¥</text>
+                <text class="sk-transparent sk-text-0-0000-681 sk-text">559.00</text>
+              </view>
+            </navigator>
+            <navigator class="goodsItem--guess-item">
+              <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            </navigator>
+            <navigator class="goodsItem--guess-item">
+              <image class="goodsItem--image sk-image" mode="aspectFill"></image>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

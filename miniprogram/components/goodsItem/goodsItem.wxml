@@ -1,0 +1,14 @@
+<view class="guess">
+  <navigator class="guess-item" wx:for="{{goodsList}}" wx:key="index" data-goods="{{item}}" url="" bind:tap="goDetails">
+    <image class="image" mode="aspectFill" src="{{item.pic}}"></image>
+    <view class="name">{{item.title}}</view>
+    <view class="price">
+      <text class="small">¥</text>
+      <text>{{item.price}}.00</text>
+    </view>
+  </navigator>
+  <view class="loadingOut">
+    <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+    <view wx:else>没有更多数据了~</view>
+  </view>
+</view>

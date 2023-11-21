@@ -1,0 +1,177 @@
+@charset "UTF-8";
+page {
+  background-color: #f7f7f8;
+}
+
+.viewport {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(https://pcapi-xiaotuxian-front-devtest.itheima.net/miniapp/images/center_bg.png);
+  background-size: 100% auto;
+}
+
+/* 用户信息 */
+.profile {
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.profile .overview {
+  display: flex;
+  height: 120rpx;
+  padding: 0 36rpx;
+  color: #fff;
+}
+
+.profile .avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.profile .gray {
+  filter: grayscale(100%);
+}
+
+.profile .meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 30rpx;
+  padding: 16rpx 0;
+  margin-left: 20rpx;
+}
+
+.profile .nickname {
+  max-width: 350rpx;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile .extra {
+  display: flex;
+  font-size: 20rpx;
+  background: none;
+  border: 1rpx solid #ffffff;
+  color: #fff;
+  border-radius: 30rpx;
+  line-height: 40rpx;
+}
+
+.profile .extra:active {
+  background: #00866e;
+}
+
+.profile .tips {
+  font-size: 22rpx;
+}
+
+.profile .settings {
+  position: absolute;
+  bottom: 0;
+  right: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+/* 我的订单 */
+.orders {
+  position: relative;
+  z-index: 99;
+  padding: 30rpx;
+  margin: 50rpx 20rpx 0;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 6rpx rgba(240, 240, 240, 0.6);
+}
+
+.orders .title {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #1e1e1e;
+}
+
+.orders .title .navigator {
+  font-size: 24rpx;
+  color: #939393;
+  float: right;
+}
+
+.orders .section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 20rpx 10rpx;
+}
+
+.orders .section .navigator,
+.orders .section .contact {
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.orders .section .navigator::before,
+.orders .section .contact::before {
+  display: block;
+  font-size: 60rpx;
+  color: #ff9545;
+}
+
+.orders .section .contact {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  line-height: inherit;
+}
+
+/* 猜你喜欢 */
+.guess {
+  background-color: #f7f7f8;
+  margin-top: 20rpx;
+}
+
+.img {
+  width: 60rpx;
+  height: 60px;
+}
+
+.text {
+  display: flex;
+  gap: 98rpx;
+  margin-left: 13rpx;
+  margin-top: -20rpx;
+  font-size: 28rpx;
+}
+
+.login_out {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  background: #00c39f;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20rpx;
+  width: 100rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.login_out:active {
+  background: #00866e;
+}
+
+.log_out_text {
+  color: #000;
+}

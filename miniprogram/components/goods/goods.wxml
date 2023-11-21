@@ -1,0 +1,12 @@
+<view class="panel hot">
+  <view class="item" wx:for="{{hotList}}" wx:key="index">
+    <view class="title">
+      <text class="title-text">{{item.title}}</text>
+      <text class="title-desc">{{item.text}}</text>
+    </view>
+      <navigator hover-class="none" url="/pages/hot/hot" class="cards">
+        <image class="image" mode="aspectFit" src="{{item.img.pic[0]}}" />
+        <image class="image" mode="aspectFit" src="{{item.img.pic[1]}}" />
+      </navigator>
+  </view>
+</view>

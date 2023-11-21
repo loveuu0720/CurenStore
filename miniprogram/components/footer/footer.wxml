@@ -1,0 +1,5 @@
+<view class="footer">
+  <view class="row">最终解释权归重庆移通学院双体系所有</view>
+  <view class="row">Coryright @ {{year}} 版权所有</view>
+  <view class="row">重庆市合川区云梦三部一组</view>
+</view>

@@ -1,0 +1,23 @@
+<view class="box">
+  <view class="top">
+    <view class="time">2023-10-12 14:58:42</view>
+    <view class="state">待发货</view>
+  </view>
+  <view class="container">
+    <view class="img">
+      <image src="{{goodsDetail.pic}}" mode="aspectFill" />
+    </view>
+    <view class="content">
+      <view class="title">
+        <text>{{goodsDetail.title}}</text>
+      </view>
+      <text class="text">{{goodsDetail.color}}  {{goodsDetail.size}}</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="count">共1件商品</view>
+    <view class="pay">实付<strong>￥{{goodsDetail.price}}.00</strong></view>
+  </view>
+  <view class="hr"></view>
+  <button type="primary" bind:tap="goDetails">再次购买</button>
+</view>

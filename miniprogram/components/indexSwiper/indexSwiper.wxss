@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* 轮播图 */
+.carousel {
+  height: 900rpx;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  background-color: #efefef;
+}
+
+.carousel .image {
+  width: 100%;
+  height: 1300rpx;
+}

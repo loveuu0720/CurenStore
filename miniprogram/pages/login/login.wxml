@@ -1,0 +1,45 @@
+<view class="viewport">
+  <view class="logo">
+    <image src="../../images/images/logo.png"></image>
+  </view>
+  <view class="login">
+    <!-- 小程序端授权登录 -->
+    <button class="button phone" open-type="getPhoneNumber" bind:tap="getPhoneNumer" wx:if="{{isPhone_login}}" >
+      <text class="icon icon-phone"></text>
+      模拟快捷登录
+    </button>
+    <view class="phone_login" wx:else>
+      <view class="options">
+        <view class="user">用户名：</view>
+        <input class="input_login user" bindinput="getName" placeholder="请输入用户名" placeholder-class="placeholder" />
+      </view>
+      <view class="options">
+        <view class="user">密码：</view>
+        <input class="input_login pwd" bindinput="getPwd" type="password" placeholder-class="placeholder" placeholder="请输入密码" />
+      </view>
+      <button class="login_btn" bind:tap="go_index">登录</button>
+    </view>
+    <view class="extra">
+      <view class="caption">
+        <text>其他登录方式</text>
+      </view>
+      <view class="choose">
+        <view class="options" bind:tap="go_phone_login">
+        <!-- 手机号登录 -->
+        <image src="../../images/images/注册.png" mode="aspectFill"/>
+        <text>去注册</text>
+      </view>
+      <view class="options phone_login" bind:tap="chang_login">
+        <image src="../../images/images/denglu.png" mode="aspectFill"/>
+        <text>账号登录</text>
+      </view>
+      <view class="options" bind:tap="chang_login">
+        <!-- 切换模拟登录 -->
+        <image src="../../images/images/微信.png" mode="aspectFill"/>
+        <text>模拟登录</text>
+      </view>
+      </view>
+    </view>
+    <view class="tips">登录/注册即视为你同意《服务条款》和《粗人店铺的隐私协议》</view>
+  </view>
+</view>

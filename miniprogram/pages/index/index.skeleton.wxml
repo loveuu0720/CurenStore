@@ -1,0 +1,89 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/10/6下午1:32:40
+使用方法：
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\Program Files\WeChatProjects\CurenClothes\miniprogram\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="navbar">
+      <view class="logo">
+        <image class="logo-image sk-image"></image>
+        <text class="logo-text sk-transparent sk-text-3-5714-693 sk-text">新鲜 · 亲民 · 快捷</text>
+      </view>
+      <view class="search">
+        <view class="icon-search">
+          <text class="iconfont icon-sousuo sk-pseudo sk-pseudo-circle"></text>
+          <text class="sk-transparent sk-text-14-2857-205 sk-text">搜索商品</text>
+        </view>
+        <view class="iconfont icon-saomiao sk-pseudo sk-pseudo-circle"></view>
+      </view>
+    </view>
+    <view class="swiper">
+      <view is="components/indexSwiper/indexSwiper">
+        <view class="indexSwiper--carousel">
+          <swiper autoplay="false" circular="true" indicator-active-color="#fff" indicator-dots="true" interval="2000" style="height: 450px;" current="0">
+            <swiper-item class="indexSwiper--item" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+              <image class="indexSwiper--image sk-image" mode="aspectFill"></image>
+            </swiper-item>
+            <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(-100%, 0px) translateZ(0px);">
+              <image class="indexSwiper--image sk-image" mode="aspectFill"></image>
+            </swiper-item>
+          </swiper>
+          <view class="indexSwiper--indicator"></view>
+        </view>
+      </view>
+      <view class="category">
+        <scroll-view scroll-x="true">
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-94 sk-text" style="background-position-x: 50%;">西装</text>
+          </navigator>
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-446 sk-text" style="background-position-x: 50%;">长袖</text>
+          </navigator>
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-878 sk-text" style="background-position-x: 50%;">短袖</text>
+          </navigator>
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-244 sk-text" style="background-position-x: 50%;">帽子</text>
+          </navigator>
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-15 sk-text" style="background-position-x: 50%;">裤子</text>
+          </navigator>
+          <navigator class="item">
+            <view class="pic">
+              <image class="icon sk-image"></image>
+            </view>
+            <text class="text sk-transparent sk-text-14-2857-483 sk-text" style="background-position-x: 50%;">鞋子</text>
+          </navigator>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</template>

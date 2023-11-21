@@ -1,0 +1,20 @@
+{
+  "name": "CurenClothes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.11.1",
+    "miniprogram-sm-crypto": "^0.3.12",
+    "tdesign-miniprogram": "^1.2.3"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.12.0"
+  }
+}

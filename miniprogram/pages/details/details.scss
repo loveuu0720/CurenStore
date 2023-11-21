@@ -1,0 +1,451 @@
+.viewport {
+  background-color: #f4f4f4;
+}
+
+.panel {
+  margin-top: 20rpx;
+  background-color: #fff;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90rpx;
+    line-height: 1;
+    padding: 30rpx 60rpx 30rpx 6rpx;
+    position: relative;
+    text {
+      padding-left: 10rpx;
+      font-size: 28rpx;
+      color: #333;
+      font-weight: 600;
+      border-left: 4rpx solid #27ba9b;
+    }
+    navigator {
+      font-size: 24rpx;
+      color: #666;
+    }
+  }
+}
+
+/* 商品信息 */
+.goods {
+  background-color: #fff;
+  .preview {
+    height: 750rpx;
+    position: relative;
+    .image {
+      width: 750rpx;
+      height: 750rpx;
+    }
+    .indicator {
+      height: 40rpx;
+      padding: 0 24rpx;
+      line-height: 40rpx;
+      border-radius: 30rpx;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      bottom: 30rpx;
+      right: 30rpx;
+      .current {
+        font-size: 26rpx;
+      }
+      .split {
+        font-size: 24rpx;
+        margin: 0 1rpx 0 2rpx;
+      }
+      .total {
+        font-size: 24rpx;
+      }
+    }
+  }
+  .meta {
+    position: relative;
+    border-bottom: 1rpx solid #eaeaea;
+    .price {
+      height: 130rpx;
+      padding: 25rpx 30rpx 0;
+      color: #fff;
+      font-size: 34rpx;
+      box-sizing: border-box;
+      background-color: #35c8a9;
+    }
+    .number {
+      font-size: 56rpx;
+    }
+    .brand {
+      width: 160rpx;
+      height: 80rpx;
+      overflow: hidden;
+      position: absolute;
+      top: 26rpx;
+      right: 30rpx;
+    }
+    .name {
+      max-height: 88rpx;
+      line-height: 1.4;
+      margin: 20rpx;
+      font-size: 32rpx;
+      color: #333;
+    }
+    .desc {
+      line-height: 1;
+      padding: 0 20rpx 30rpx;
+      font-size: 24rpx;
+      color: #cf4444;
+    }
+  }
+  .action {
+    padding-left: 20rpx;
+    .item {
+      height: 90rpx;
+      padding-right: 30rpx;
+      border-bottom: 1rpx solid #eaeaea;
+      font-size: 26rpx;
+      color: #333;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &:last-child {
+        border-bottom: 0 none;
+      }
+    }
+    .label {
+      width: 60rpx;
+      color: #898b94;
+      margin: 0 16rpx 0 10rpx;
+    }
+    .text {
+      flex: 1;
+      -webkit-line-clamp: 1;
+    }
+  }
+}
+
+/* 商品详情 */
+.detail {
+  padding-left: 20rpx;
+  .content {
+    margin-left: -20rpx;
+    .image {
+      width: 100%;
+    }
+  }
+  .properties {
+    padding: 0 20rpx;
+    margin-bottom: 30rpx;
+    .item {
+      display: flex;
+      line-height: 2;
+      padding: 10rpx;
+      font-size: 26rpx;
+      color: #333;
+      border-bottom: 1rpx dashed #ccc;
+    }
+    .label {
+      width: 200rpx;
+    }
+    .value {
+      flex: 1;
+    }
+  }
+}
+
+/* 同类推荐 */
+.similar {
+  .content {
+    padding: 0 20rpx 200rpx;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    .goods {
+      width: 300rpx;
+      padding: 24rpx 20rpx 10rpx;
+      margin: 10rpx 7rpx;
+      border-radius: 10rpx;
+      background-color: #fff;
+    }
+    .image {
+      width: 300rpx;
+      height: 260rpx;
+    }
+    .name {
+      height: 80rpx;
+      margin: 10rpx 0;
+      font-size: 26rpx;
+      color: #262626;
+    }
+    .price {
+      line-height: 1;
+      font-size: 20rpx;
+      color: #cf4444;
+    }
+    .number {
+      font-size: 26rpx;
+      margin-left: 2rpx;
+    }
+  }
+  navigator {
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+
+/* 底部工具栏 */
+.toolbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+  height: 100rpx;
+  padding: 0 20rpx var(--window-bottom);
+  border-top: 1rpx solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: content-box;
+  .buttons {
+    display: flex;
+    & > view {
+      width: 220rpx;
+      text-align: center;
+      line-height: 72rpx;
+      font-size: 26rpx;
+      color: #fff;
+      border-radius: 72rpx;
+    }
+    .addcart {
+      background-color: #ffa868;
+    }
+    .buynow,
+    .payment {
+      background-color: #27ba9b;
+      margin-left: 20rpx;
+    }
+  }
+  .icons {
+    padding-right: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    .left_icon {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .iconfont {
+        font-size: 40rpx;
+        color: #27ba9b;
+      }
+      text {
+        font-size: 20rpx;
+        color: rgb(87, 84, 84);
+      }
+    }
+    
+  }
+}
+.detail_img {
+  width: 100%;
+  margin-top: -10px;
+}
+.top {
+  padding: 30rpx;
+  display: flex;
+  .img {
+    width: 180rpx;
+    height: 180rpx;
+  }
+  .left_price {
+    margin: 40rpx 0rpx 0rpx 40rpx;
+    .price {
+      font-size: 48rpx;
+      color: #fe560a;
+    }
+    .repertory {
+      font-size: 24rpx;
+      color: #aea2a8;
+    }
+    .choose {
+      font-size: 28rpx;
+    }
+  }
+}
+// 
+.color{
+  padding-left: 30rpx;
+  .title {
+    color: #b7b7b7;
+  }
+  .minibox {
+    margin: 30rpx;
+    width: 120rpx;
+    height: 45rpx;
+    border: 1px solid #d4d3d3;
+    text-align: center;
+    color: #000;
+    border-radius: 10rpx;
+    font-size: 22rpx;
+    line-height: 45rpx;
+    display: inline-block;
+  }
+}
+.size {
+  margin-top: 40rpx;
+  padding-left: 30rpx;
+  .title {
+    color: #b7b7b7;
+  }
+  .minibox {
+    margin: 30rpx;
+    width: 120rpx;
+    height: 45rpx;
+    border: 1px solid #d4d3d3;
+    text-align: center;
+    color: #000;
+    border-radius: 10rpx;
+    font-size: 22rpx;
+    line-height: 45rpx;
+    display: inline-block;
+    margin: 16rpx;
+  }
+}
+.acount {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    font-size: 28rpx;
+  }
+  .addOrRed {
+      right: 5rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 220rpx;
+      height: 48rpx;
+      .text {
+        height: 100%;
+        padding: 0 20rpx;
+        font-size: 32rpx;
+        color: #444;
+      }
+      .input {
+        height: 100%;
+        text-align: center;
+        border-radius: 4rpx;
+        font-size: 24rpx;
+        color: #444;
+        background-color: #f6f6f6;
+      }
+  }
+}
+.bottom_btn {
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  width: 80%;
+  background: #ffa868;
+  color: #fff;
+}
+.click_btn {
+  background: #000;
+}
+.top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 1px solid rgb(211, 208, 208);
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  align-items: center;
+  .icon {
+    margin-left: 30rpx;
+    display: flex;
+    .bg {
+      width: 55rpx;
+      height: 55rpx;
+      background: #27ba9b;
+      border-radius: 50%;
+      position: relative;
+      .icon_address {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+      }
+    }
+    .content {
+      margin-left: 30rpx;
+      .name {
+        font-size: 28rpx;
+      }
+      .address {
+        font-size: 24rpx;
+      }
+    }
+    
+  }
+  .select {
+    margin-right: 20rpx;
+  }
+}
+.add_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.sizeBox {
+  width: 120rpx;
+  height: 45rpx;
+  text-align: center;
+  color: #000;
+  font-size: 22rpx;
+  line-height: 45rpx;
+  display: inline-block;
+  margin: 16rpx;
+  white-space: nowrap;
+}
+.card {
+  position: relative;
+  margin: 32rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  border: 1px solid rgb(197, 195, 195);
+  text-align: center;
+  font-size: 22rpx;
+}
+
+.card--active {
+  border: 8rpx solid #01ab9d;
+}
+
+
+
+/* 横向布局 */
+.horizontal-box {
+  width: calc(100% - 80rpx);
+  display: flex;
+  align-items: center;
+  margin: 32rpx;
+  justify-content: center;
+}
+
+.horizontal-box .card {
+  flex: 1;
+  margin: 0;
+}
+
+.horizontal-box .card + .card {
+  margin-left: 24rpx;
+}

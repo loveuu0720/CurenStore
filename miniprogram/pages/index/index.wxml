@@ -1,0 +1,47 @@
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loadingSKE}}" />
+<view class="navbar">
+  <!-- logo文字 -->
+  <view class="logo">
+    <image class="logo-image" src="../../images/images/logo.png"></image>
+    <text class="logo-text">时尚 · 潮流 · 便携</text>
+  </view>
+  <!-- 搜索条 -->
+<van-sticky>
+    <van-search value="{{ value }}" bind:search="onSearch" bind:change="onChange" shape="round" background="#01ab9d" placeholder="外套" />
+</van-sticky>
+
+</view>
+<view class="swiper">
+  <!-- 轮播图组件 -->
+  <indexSwiper></indexSwiper>
+  <!-- 种类 -->
+  <view class="category">
+    <scroll-view scroll-x>
+      <navigator url="" data-id="{{item.id}}" bind:tap="get_id" open-type="switchTab" class="item" wx:for="{{categoryList}}" wx:key="index">
+        <view class="pic">
+        <image class="icon" src="{{item.pic}}"/>
+        </view>
+        <text class="text">{{item.title}}</text>
+      </navigator>
+    </scroll-view>
+  </view>
+  <!-- 商品 -->
+  <goods hotList="{{hotList}}"></goods>
+  <!-- 猜你喜欢 -->
+<view class="caption"   wx:if="{{!value}}">
+  <image class="img1" src="../../images/images/bubble.png" mode="" />
+  <text class="text">猜你喜欢</text>
+  <image class="img2" src="../../images/images/bubble.png" mode="" />
+</view>
+  <!-- 搜索结果 -->
+  <view class="caption" wx:else>
+  <image class="img1" src="../../images/images/bubble.png" mode="" />
+  <text class="text">搜索关键词：{{value}}</text>
+  <image class="img2" src="../../images/images/bubble.png" mode="" />
+</view>
+<goodsItem goodsList="{{goodsList}}" loading="{{loading}}"></goodsItem>
+
+</view>
+<!-- 底部组件 -->
+<footer></footer>

@@ -1,0 +1,15 @@
+<view class="box">
+  <image class="img" src="../../images/images/对.png" mode="aspectFill" />
+  <view class="text">支付成功</view>
+  <view class="btn">
+    <button class="button" bind:tap="goIndex">返回首页</button>
+    <button class="button" bind:tap="goOrder">查看订单</button>
+  </view>
+</view>
+  <!-- 猜你喜欢 -->
+  <view class="caption"   wx:if="{{!value}}">
+  <image class="img1" src="../../images/images/bubble.png" mode="" />
+  <text class="text">猜你喜欢</text>
+  <image class="img2" src="../../images/images/bubble.png" mode="" />
+</view>
+<goodsItem goodsList="{{goodsList}}" loading="{{loading}}"></goodsItem>

@@ -1,0 +1,86 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/classify/classify",
+		"pages/personPage/personPage",
+		"pages/shoppingCart/shoppingCart",
+		"pages/paid/paid",
+		"pages/details/details",
+		"pages/login/login",
+		"pages/phone_login/phone_login",
+		"pages/pay/pay",
+		"pages/paySuccess/paySuccess"
+	],
+	"window": {
+		"backgroundColor": "#F6F6F6",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#01ab9d",
+		"navigationBarTitleText": "Curen的服装品牌店",
+		"navigationBarTextStyle": "white"
+	},
+	"sitemapLocation": "sitemap.json",
+	"tabBar": {
+		"selectedColor": "#01ab9d",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "images/tabs/home_default.png",
+				"selectedIconPath": "images/tabs/home_selected.png"
+			},
+			{
+				"pagePath": "pages/classify/classify",
+				"text": "分类",
+				"iconPath": "images/tabs/category_default.png",
+				"selectedIconPath": "images/tabs/category_selected.png"
+			},
+			{
+				"pagePath": "pages/shoppingCart/shoppingCart",
+				"text": "购物车",
+				"iconPath": "images/tabs/cart_default.png",
+				"selectedIconPath": "images/tabs/cart_selected.png"
+			},
+			{
+				"pagePath": "pages/personPage/personPage",
+				"text": "个人页面",
+				"iconPath": "images/tabs/user_default.png",
+				"selectedIconPath": "images/tabs/user_selected.png"
+			}
+		]
+	},
+	"usingComponents": {
+		"goods": "components/goods/goods",
+		"indexSwiper": "components/indexSwiper/indexSwiper",
+		"goodsItem": "components/goodsItem/goodsItem",
+		"footer": "components/footer/footer",
+		"orderArr": "components/orderArr/orderArr",
+		"shippingAddress": "components/shippingAddress/shippingAddress",
+		"van-loading": "@vant/weapp/loading/index",
+		"van-icon": "@vant/weapp/icon/index",
+		"van-search": "@vant/weapp/search/index",
+		"van-popup": "@vant/weapp/popup/index",
+		"van-notify": "@vant/weapp/notify/index",
+		"van-toast": "@vant/weapp/toast/index",
+		"van-checkbox": "@vant/weapp/checkbox/index",
+		"van-checkbox-group": "@vant/weapp/checkbox-group/index",
+		"van-button": "@vant/weapp/button/index",
+		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
+		"van-submit-bar": "@vant/weapp/submit-bar/index",
+		"van-sticky": "@vant/weapp/sticky/index",
+		"van-dialog": "@vant/weapp/dialog/index",
+		"van-stepper": "@vant/weapp/stepper/index",
+		"van-radio": "@vant/weapp/radio/index",
+		"van-radio-group": "@vant/weapp/radio-group/index",
+		"t-radio-group": "tdesign-miniprogram/radio-group/radio-group",
+		"t-radio": "tdesign-miniprogram/radio/radio",
+		"t-icon": "tdesign-miniprogram/icon/icon",
+		"t-swipe-cell": "tdesign-miniprogram/swipe-cell/swipe-cell",
+		"t-cell": "tdesign-miniprogram/cell/cell",
+		"van-card": "@vant/weapp/card/index",
+		"van-cell": "@vant/weapp/cell/index",
+		"van-cell-group": "@vant/weapp/cell-group/index"
+	},
+	"miniApp": {
+		"useAuthorizePage": true
+	}
+}

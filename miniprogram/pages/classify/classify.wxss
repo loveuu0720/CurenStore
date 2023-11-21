@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import "./classify.skeleton.wxss";
+page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.viewport {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  padding: 0 30rpx 20rpx;
+  background-color: #fff;
+}
+
+.search .input {
+  margin-top: 20rpx;
+  line-height: 64rpx;
+  height: 64rpx;
+  padding-left: 26rpx;
+  color: #8b8b8b;
+  font-size: 28rpx;
+  border-radius: 32rpx;
+  background-color: #f3f4f4;
+}
+
+/* 分类 */
+.categories {
+  flex: 1;
+  min-height: 400rpx;
+  display: flex;
+}
+
+/* 一级分类 */
+.primary {
+  overflow: hidden;
+  width: 180rpx;
+  flex: none;
+  background-color: #f6f6f6;
+}
+
+.primary .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96rpx;
+  font-size: 26rpx;
+  color: #595c63;
+  position: relative;
+}
+
+.primary .active {
+  background-color: white;
+  border-left: 10rpx solid #01ab9d;
+}
+
+.primary .item:last-child::after,
+.primary .active::after {
+  display: none;
+}
+
+/* 二级分类 */
+.secondary {
+  background-color: #fff;
+}
+
+.secondary .carousel {
+  height: 200rpx;
+  margin: 0 30rpx 20rpx;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+.secondary .panel {
+  margin: 0 30rpx 0rpx;
+}
+
+.secondary .title {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #f7f7f8;
+}
+
+.secondary .title .more {
+  float: right;
+  padding-left: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.secondary .section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+}
+
+.secondary .section .goods {
+  width: 150rpx;
+  margin: 0rpx 30rpx 20rpx 0;
+}
+
+.secondary .section .goods:nth-child(3n) {
+  margin-right: 0;
+}
+
+.secondary .section .goods image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.secondary .section .goods .name {
+  height: 100rpx;
+  padding: 5rpx;
+  font-size: 22rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+}
+
+.secondary .section .goods .price {
+  padding: 5rpx;
+  font-size: 18rpx;
+  color: #cf4444;
+}
+
+.secondary .section .goods .number {
+  font-size: 24rpx;
+  margin-left: 2rpx;
+}
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id 4273904 */
+  src: url("//at.alicdn.com/t/c/font_4273904_002ycw15jjeba.woff2?t=1696490346497") format("woff2"), url("//at.alicdn.com/t/c/font_4273904_002ycw15jjeba.woff?t=1696490346497") format("woff"), url("//at.alicdn.com/t/c/font_4273904_002ycw15jjeba.ttf?t=1696490346497") format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+  content: "\e651";
+}
+
+.icon-saomiao:before {
+  content: "\e61b";
+}

@@ -1,0 +1,11 @@
+.footer {
+  padding: 30rpx 0rpx;
+  text-align: center;
+  background: rgb(240, 238, 238);
+  border-top: 1px solid var(--subColor);
+  color: var(--greyColor);
+  line-height: 1.3em;
+  .row {
+    font-size: 26rpx;
+  }
+}

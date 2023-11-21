@@ -1,0 +1,34 @@
+<view class="list">
+  <view class="icon">
+    <view class="bg">
+      <van-icon class="icon_address" name="location" color="#ffffff" />
+    </view>
+    <view class="content">
+      <view class="name">赵昱峰 13334468746</view>
+      <view class="address">重庆市合川区双体疗养院项目三部-1组</view>
+    </view>
+  </view>
+  <van-icon name="arrow" />
+</view>
+<t-swipe-cell>
+  <navigator :url="" hover-class="none" class="navigator">
+    <image mode="aspectFill" class="picture" src="{{goodsDetail.pic}}" />
+    <view class="meta">
+      <view class="name ellipsis">{{goodsDetail.title}}</view>
+      <view class="attrsText ellipsis">{{goodsDetail.color}} {{goodsDetail.size}}</view>
+      <view class="price">{{goodsDetail.price}}.00</view>
+    </view>
+    <view class="count">x{{goodsDetail.count}}</view>
+  </navigator>
+</t-swipe-cell>
+
+<van-cell-group class="cell">
+  <van-cell title="商品总价" value="￥{{goodsDetail.price}}.00" />
+  <van-cell title="运费" value="￥6.00"/>
+</van-cell-group>
+
+<van-submit-bar
+  price="{{ goodsDetail.price*100 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>

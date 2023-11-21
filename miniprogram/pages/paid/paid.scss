@@ -1,0 +1,29 @@
+page{
+  background: #f7f7f8;
+}
+.nav {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  .icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 15rpx;
+  }
+  .title {
+    line-height: 88rpx;
+    font-weight: 700;
+    margin-left: 245rpx;
+  }
+}
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  background: #fff;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+
+.active {
+  border-bottom: 2px solid  #01ab9d;
+}

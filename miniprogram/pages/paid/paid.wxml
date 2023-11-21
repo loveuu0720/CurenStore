@@ -1,0 +1,9 @@
+<view class="nav">
+  <image class="icon" src="../../images/images/left.png" mode="" bind:tap="gopersonPage" />
+  <view class="title">订单列表</view>
+</view>
+<view class="navList">
+  <view data-index="{{index}}" wx:for="{{title}}" wx:key="index" bindtap="toggleActive" class="all {{index === activeIndex ? 'active' : ''}}">{{item}}</view>
+</view>
+<!-- 每个卡片 -->
+<orderArr goodsDetail="{{goodsDetail}}" ></orderArr>

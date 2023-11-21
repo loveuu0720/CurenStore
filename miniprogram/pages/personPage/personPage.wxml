@@ -1,0 +1,65 @@
+<!-- 骨架屏 -->
+<import src="personPage.skeleton.wxml" />
+
+<template is="skeleton" wx:if="{{loadingSKE}}" />
+<scroll-view class="viewport" scroll-y enable-back-to-top>
+  <!-- 个人资料 -->
+  <view class="profile" :style="{ paddingTop: safeAreaInsets!.top + 'px' }">
+    <!-- 情况1：已登录 -->
+    <view class="overview" wx:if="false">
+      <navigator url="/pagesMember/profile/profile" hover-class="none">
+        <image class="avatar" mode="aspectFill" src="{{avatar}}" bind:tap="seeImg"></image>
+      </navigator>
+      <view class="meta">
+        <view class="nickname">{{username}}</view>
+        <button class="extra" bindchooseavatar="updateAvat" open-type="chooseAvatar" hover-class="none">
+          更新头像昵称
+        </button>
+        <button class="login_out" bind:tap="showPop" hover-class="none">
+          退出登录
+        </button>
+      </view>
+      <van-dialog id="van-dialog" />
+    </view>
+
+    <!-- 情况2：未登录 -->
+    <view class="overview" wx:else>
+      <navigator url="/pages/login/login" hover-class="none">
+        <image class="avatar gray" mode="aspectFill" src="http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-06/db628d42-88a7-46e7-abb8-659448c33081.png"></image>
+      </navigator>
+      <view class="meta">
+        <navigator url="/pages/login/login" hover-class="none" class="nickname">
+          未登录
+        </navigator>
+        <view class="extra">
+          <text class="tips">点击登录账号</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <view class="orders">
+    <view class="title">
+      我的订单
+      <view bind:tap="goPaid" class="navigator" hover-class="none">
+        查看全部订单<text class="icon-right"></text>
+      </view>
+    </view>
+    <view class="section">
+      <!-- 订单 -->
+      <navigator wx:for="{{personList}}" wx:key="index" url="" class="navigator" hover-class="none">
+        <image class="img" src="{{item}}" mode="aspectFit" bindtap="goPaid" />
+      </navigator>
+    </view>
+    <view class="text">
+      <text>已付款</text>
+      <text>待付款</text>
+      <text>待收货</text>
+      <text>待评价</text>
+    </view>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view class="guess">
+    <goodsItem goodsList="{{goodsList}}" loading="{{loading}}"></goodsItem>
+  </view>
+</scroll-view>
